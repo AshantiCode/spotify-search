@@ -7,15 +7,21 @@
 	box-sizing: border-box;
 }
 
+section {
+	margin-block: 0;
+	padding: 0;
+}
+
 
 body {
-	background: url(img/turntable.jpg)no-repeat;
+	background: url(img/turntable.jpg) no-repeat;
 	background-size: cover;
 	color: rgb(236, 232, 232);
 	height: 100vh;
 	overflow: hidden;
 	font-family: 'Montserrat',
 		sans-serif;
+	position: relative;
 }
 
 body:after {
@@ -215,4 +221,47 @@ span img {
 
 .fallback-img {
 	background-image: url("./img/spotify2.png");
+}
+
+@media only screen and (max-width: 1150px) {
+	body {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background: rgb(49, 43, 43);
+		width: 100vw;
+	}
+
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.text-container {
+		margin-top: 2rem;
+		width: 80%;
+		text-align: center;
+	}
+
+	.buttons-inner {
+		align-self: center;
+	}
+
+	.scroll-container {
+		overflow: unset;
+		height: 99vh;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.text-container {
+		padding: .5rem 1.3rem;
+		width: 100%;
+	}
+
+	.sub-heading {
+		font-size: 1.2rem;
+	}
+
+	.wrapper {
+		margin: 0;
+	}
 }
