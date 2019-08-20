@@ -135,7 +135,7 @@ input[type='text'] {
 	background: transparent;
 	border: 2px solid #1db954;
 	padding: 1.4rem 10rem;
-	color: #1db954;
+	color: #eee;
 	text-transform: uppercase;
 	text-decoration: none;
 	border-radius: 5px;
@@ -149,7 +149,6 @@ button:hover {
 	/* transform: scale(1.1); */
 	background: #1db954;
 	transition: all 0.2s ease 0s;
-	color: #eee;
 }
 
 .results-container {
