@@ -32,20 +32,18 @@
                         "https://api.spotify.com/v1/search",
                         baseUrl
                     );
-                console.log("payload: ", payload);
-                console.log('replae:', next);
+                // console.log("payload: ", payload);
 
-                console.log("payloadNEXT: ", payload.next);
+
+
                 //now to access the array
-
-
                 var html = "";
                 for (var i = 0; i < payload.items.length; i++) {
 
                     var extUrl = payload.items[i].external_urls.spotify;
                     if (payload.items[i].images.length > 0) {
                         img = payload.items[i].images[1].url;
-                        console.log("image:", img);
+
                     } else {
                         img = "./img/no-image.jpeg";
                     }
@@ -62,7 +60,7 @@
                         payload.items[i].name +
                         "</p></a></div>";
                 } //close forloop
-                console.log("result:", $(".results-container"));
+
 
 
                 if (payload.total > 20) {
@@ -90,7 +88,7 @@
     // ##############################LOAD MORE BUTTON #############
 
     $(document).on("click", "#loadmore-button", function () {
-        console.log("I was clikces!!!");
+
         $.ajax({
             url: next,
             success: function (payload) {
@@ -137,7 +135,7 @@
 
         clearTimeout(timerId);
 
-        // ################### INFINITE SCROLL #########################
+        // ################### INFINITE SCROLL 
         if (
             $(document).scrollTop() + $(window).height() >= $(document).height() - 200
         ) {
@@ -184,13 +182,4 @@
 
     }
 
-
-
-
-    // function infiniteScrollCheck() {
-    //     console.log('infinite scrool check:");
-    // $(document).scrollTop();
-    // $(window).height()
-    // $(document).height() // insert the rest HERE################
-    // }
 })(); //closes iife
