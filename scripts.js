@@ -12,7 +12,7 @@
 
     $("#submit-button").on("click", function () {
         var userInput = $('input[name="user-input"]').val();
-        // var radioInput = $(".artist-or-album").val();
+
 
         var radioInput = $('input[name="category"]:checked').val();
 
@@ -32,7 +32,7 @@
                         "https://api.spotify.com/v1/search",
                         baseUrl
                     );
-                // console.log("payload: ", payload);
+                console.log("payload: ", payload);
 
 
 
